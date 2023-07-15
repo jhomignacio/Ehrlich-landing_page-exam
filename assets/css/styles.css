@@ -1,0 +1,840 @@
+#nav-menus {
+  padding: 25px;
+}
+
+#nav-menus .grid {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav-menus ._menu .__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav-menus ._menu .__links li {
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#nav-menus ._menu .__links li.active {
+  font-weight: 700;
+}
+
+#nav-menus ._icons .__social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#nav-menus ._icons .__social ul li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border-radius: 35px;
+  border: 1px solid #F2F2F2;
+  background: #FFF;
+  padding: 5px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.top-bar {
+  padding: 20px 0px;
+  background: #F2F2F2;
+}
+
+@media screen and (max-width: 768px) {
+  .top-bar .container .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 10px;
+    overflow: hidden;
+  }
+}
+
+.top-bar .container .flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-bar .container .flex span {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .top-bar .container .flex span {
+    display: none;
+  }
+}
+
+#hero {
+  background-image: url("../../assets/images/hero.png");
+  height: 650px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+#hero ._text {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  right: 170px;
+  bottom: 88px;
+}
+
+@media screen and (max-width: 768px) {
+  #hero ._text {
+    width: 100%;
+    right: 0;
+  }
+}
+
+#hero button {
+  background: #FFF;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#infos {
+  margin: 45px 0;
+}
+
+#infos .container .grid div h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#infos .container .grid div h2 span {
+  font-size: 18px;
+}
+
+#infos .container .grid div p {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+#infos .container .grid .col-span-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#infos .container .grid .col-span-2 button {
+  background: #000;
+  padding: 10px;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#exclusive {
+  background-image: url("../../assets/images/bg.png");
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+#exclusive .grid {
+  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+#exclusive .grid h1 {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#exclusive .grid h3 {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#exclusive .grid button {
+  background: #FFF;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+#trending .container {
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #trending .container {
+    padding: 10px;
+  }
+}
+
+#trending .container ._heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#trending .container ._heading h1 {
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: capitalize;
+  padding: 20px 0;
+}
+
+#trending .container ._heading p {
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 20px 0;
+}
+
+#trending .container .grid .col ._product img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#trending .container .grid .col ._product h2 {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+#trending .collections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#trending .collections button {
+  border-radius: 50px;
+  border: 1px solid #000;
+  background: #FFF;
+  padding: 10px 20px;
+}
+
+#new-arrival {
+  background-image: url(../../assets/images/bg2.png);
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  margin-top: 62px;
+  min-height: 400px;
+  background-position: initial;
+  background-repeat: no-repeat;
+}
+
+#new-arrival .w-50 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #new-arrival .w-50 {
+    width: 100%;
+    position: unset;
+    padding: 20px;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+#new-arrival .w-50 h1 {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 86px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 86px;
+  /* 100% */
+  text-transform: uppercase;
+  margin-top: 47px;
+}
+
+@media screen and (max-width: 768px) {
+  #new-arrival .w-50 h1 {
+    font-size: 56px;
+  }
+}
+
+#new-arrival .w-50 p {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 21px;
+}
+
+#new-arrival .w-50 button {
+  background: #FFF;
+  padding: 10px 20px;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 53px;
+}
+
+#recently-bought .container {
+  padding: 10px;
+}
+
+#recently-bought ._heading h1 {
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: capitalize;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+#recently-bought .grid .col ._product img {
+  width: 100%;
+}
+
+#recently-bought .grid .col ._product .__price {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  color: #C1272D;
+}
+
+#recently-bought .grid .col ._product .__price span {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  padding-left: 20px;
+  text-decoration: line-through;
+}
+
+#recently-bought .grid .col ._product p {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  padding: 10px 0px;
+}
+
+#recently-bought .grid .col ._product ._btn_grp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#recently-bought .grid .col ._product ._btn_grp button {
+  border-radius: 50px;
+  border: 1px solid #000;
+  background: #FFF;
+  padding: 10px 20px;
+  font-size: 12px;
+  background: #000;
+  color: #FFF;
+}
+
+#recently-bought .grid .col ._product ._btn_grp button:hover {
+  background: #fff;
+  color: #000;
+}
+
+#inspo {
+  background: #F2F2F2;
+}
+
+#inspo .container {
+  padding: 10px;
+}
+
+#inspo .container ._heading h1 {
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: capitalize;
+  padding: 20px 0;
+}
+
+#inspo .container ._heading p {
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 20px 0;
+}
+
+#inspo .container .grid .col img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#inspo .container .text-center {
+  margin: 40px 0;
+}
+
+#inspo .container .text-center button {
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+#signup {
+  margin-top: 50px;
+  background: #000;
+  padding: 20px;
+}
+
+#signup h1 {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#signup .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#signup .flex input {
+  background: #F2F2F2;
+  width: 354px;
+  height: 35px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #signup .flex input {
+    max-width: 100%;
+    width: -webkit-fill-available;
+  }
+}
+
+#signup .flex button {
+  background: #fff;
+  height: 35px;
+  padding: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  margin-top: 50px;
+  background: #fff;
+}
+
+.footer .container {
+  padding: 0 20px;
+}
+
+.footer .container .grid .col .grid div h2 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.footer .container .grid .col .grid div ul li {
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  padding-top: 10px;
+}
+
+.footer .container .grid .social h2 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.footer .container .grid .social .__icons {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.footer .copyright {
+  margin: 66px 0;
+}
+
+.footer .copyright h3 {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer .copyright img {
+  float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .copyright img {
+    float: unset;
+  }
+}
+
+#cart .container {
+  padding: 20px 0;
+}
+
+#cart .container ._top_info h1 {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 15px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#cart .container ._top_info p {
+  font-weight: 400;
+  padding: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#cart .container ._top_info .flex {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 10px;
+}
+
+#cart .container ._heading {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#cart .container .__divider {
+  border: 1px solid #eee;
+}
+
+#cart .container .__grp_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+#cart .container .__grp_items ._notice {
+  background: #fdeeee;
+  padding: 10px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cart .container .__grp_items button {
+  border-radius: 50px;
+  border: 1px solid #000;
+  background: #FFF;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+#cart .container .__grp_items .actions {
+  position: absolute;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #cart .container .__grp_items .actions {
+    position: unset;
+    margin: 20px 0;
+  }
+}
+
+#cart .container .col-right ._heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#cart .container .col-right .__summary {
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+#cart .container .col-right .__summary p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#cart .container .col-right .__summary ._total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+#cart .container .col-right button {
+  background: #000;
+  color: #fff;
+  padding: 15px 20px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+#cart .relative-p {
+  position: relative;
+}
+
+.__divider {
+  border: 1px solid #eee;
+}
+
+.scale {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.item_value {
+  margin-top: 20px;
+  border: 1px solid #eee;
+  padding: 15px;
+  width: 100px;
+}
+
+.__des h2 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.__des p {
+  margin: 15px 0;
+}
+
+.shop-btn {
+  background: #000;
+  color: #fff;
+  padding: 15px 20px;
+  margin-top: 8px;
+}
+
+.item-added {
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: capitalize;
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .sm-hidden {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ehrlich</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <nav id="nav-menus" class="container mx-auto">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+                <div class="col _menu">
+                    <ul class="__links">
+                        <li :class="`${cart_page ? '' : 'active'}`" @click="cart_page = false">Home</li>
+                        <li>Women</li>
+                        <li>Plus</li>
+                        <li>Men</li>
+                        <li>Accessories</li>
+                    </ul>
+                </div>
+                <div class="col _logo">
+                    <img src="assets/images/Logo.svg" alt="logo" class="mx-auto">
+                </div>
+                <div class="col _icons">
+                    <div class="__social">
+                        <ul>
+                            <li><img src="assets/images/profile.svg" alt="profile"></li>
+                            <li @click="cart_page = true"><img src="assets/images/shopping_cart.svg" alt="shopping_cart" :class="`${cart_page ? 'scale' : ''}`"></li>
+                            <li><img src="assets/images/heart.svg" alt="heart"></li>
+                            <li><img src="assets/images/headphone.svg" alt="headphone"></li>
+                            <li><img src="assets/images/search.svg" alt="search"></li>
+                            <li>
+                                <button>
+                                    <img src="assets/images/US Flag.svg" alt="Flag">
+                                    <span>USD</span>
+                                    <img src="assets/images/chev-down.svg" alt="chevdown">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="top-bar">
+            <div>
+                <div class="container mx-auto">
+                    <div class="grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-1">
+                        <div class="flex gap-4"><img src="assets/images/bx_bx-crown.svg" alt="crown"><span>Exclusive Deals for VIP 2 and up!</span></div>
+                        <div class="flex gap-4"><img src="assets/images/bx_bx-star.svg" alt=""><span>Exclusive Deals for VIP 2 and up!</span></div>
+                        <div class="flex gap-4"><img src="assets/images/mdi_truck-delivery-outline.svg" alt=""><span>Exclusive Deals for VIP 2 and up!</span></div>
+                        <div class="flex gap-4"><img src="assets/images/bx_bx-map-pin.svg" alt=""><span>Exclusive Deals for VIP 2 and up!</span></div>
+                        <div class="flex gap-4"><img src="assets/images/bx_bx-purchase-tag.svg" alt=""><span>Exclusive Deals for VIP 2 and up!</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     
+        <div v-if="!cart_page">
+            <section id="hero">
+                <div class="container mx-auto">
+                    <div class="_text">
+                        <img src="assets/images/hero-text.png" alt="">
+                        <a href="#recently-bought"><button> SHOP NOW </button></a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="infos">
+                <div class="container mx-auto">
+                    <div class="grid lg:grid-cols-6 md:grid-cols-6 sm:grid-cols-1 justify-items-center gap-4">
+                        <div>
+                            <h2>$5 <span>OFF</span></h2>
+                            <p>Orders above $50</p>
+                        </div>
+                        <div>
+                            <h2>$15 <span>OFF</span></h2>
+                            <p>Orders above $75</p>
+                        </div>
+                        <div>
+                            <h2>$20 <span>OFF</span></h2>
+                            <p>Orders above $150</p>
+                        </div>
+                        <div>
+                            <h2>$30 <span>OFF</span></h2>
+                            <p>Orders above $200</p>
+                        </div>
+                        <div class="col-span-2">
+                        <button>Check out all site-wide deals</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section id="exclusive">
+                <div class="container mx-auto">
+                    <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-4">
+                        <div><h1>black friday exclusive</h1></div>
+                        <div><h3>free shipping on all orders for VIP 2 and up!</h3></div>
+                        <div>
+                            <a href="#recently-bought"><button> SHOP NOW </button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="trending">
+                <div class="container mx-auto">
+                    <div class="_heading">
+                        <h1>now trending</h1>
+                        <p>See what everyone’s wearing right now</p>
+                    </div>
+                    <div class="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 gap-8">
+                        <div class="col" v-for="product in products">
+                            <div class="_product" >    
+                                <img :src="`assets/images/trending/${product.image}`" alt="">
+                                <h2>{{product.name}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collections">
+                        <button>#thanksgiving</button>
+                        <button>#NewYears</button>
+                        <button>#Knitted</button>
+                        <button>#Pajamas</button>
+                        <button>#WFH</button>
+                        <button>#Fallfashion</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="new-arrival">
+                <div class="w-50">
+                    <h1>new arrivals</h1>
+                    <p>Get ready for the holidays with us!</p>
+                    <a href="#recently-bought"><button> SHOP NOW </button></a>
+                </div>
+            </section>
+
+            <section id="recently-bought" class="pt-5">
+                <div class="container mx-auto">
+                    <div class="_heading">
+                        <h1>recently bought</h1>
+                    </div>
+                    <div class="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-1 gap-8">
+                        <div class="col" v-for="item in recently_bought_items">
+                            <div class="_product" >    
+                                <img :src="`assets/images/recent/${item.image}`" alt="">
+                                <p>{{item.des}}</p>
+                                <div class="_btn_grp">
+                                    <button @click="add_to_cart(item)">Buy Now</button>
+                                    <p class="__price">${{item.sale_price}} <span>${{item.reg_price}}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="inspo" class="mt-5">
+                <div class="container mx-auto">
+                    <div class="_heading">
+                        <h1>your next inspo</h1>
+                        <p>Checkout who’s wearing what by using #THREADEDInspo on Instagram</p>
+                    </div>
+                    <div class="grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-1 gap-8">
+                        <div class="col" v-for="people in inspo">
+                            <img :src="`assets/images/inspo/${people.image}`" alt="">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button>View All post</button>
+                    </div>
+                </div>
+                <section id="signup">
+                    <div class="container mx-auto">
+                        <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-8">
+                            <div class="col-span-2">
+                                <h1>sign up for exclusive deals and updates</h1>
+                            </div>
+                            <div class="flex">
+                                <input type="text" placeholder="Your Email Address" value="">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M14.9551 9.50772L6.15039 2.63077C6.12739 2.61265 6.09974 2.6014 6.07062 2.59829C6.0415 2.59518 6.0121 2.60035 5.98579 2.6132C5.95948 2.62605 5.93733 2.64606 5.92187 2.67093C5.90642 2.69581 5.8983 2.72453 5.89844 2.75381V4.26358C5.89844 4.35928 5.94336 4.45108 6.01758 4.50967L13.0488 9.99991L6.01758 15.4901C5.94141 15.5487 5.89844 15.6405 5.89844 15.7362V17.246C5.89844 17.3769 6.04883 17.4491 6.15039 17.3691L14.9551 10.4921C15.0299 10.4337 15.0905 10.3591 15.1321 10.2738C15.1737 10.1885 15.1954 10.0948 15.1954 9.99991C15.1954 9.905 15.1737 9.81134 15.1321 9.72605C15.0905 9.64077 15.0299 9.5661 14.9551 9.50772Z" fill="black"/>
+                                </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <!-- Cart Page -->
+        <section id="cart" class="pt-5 mt-5" v-if="cart_page">
+            <div class="container mx-auto">
+                <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 _top_info px-4">
+                    <div>
+                        <button class="shop-btn" @click="cart_page = false">Browse More Products</button class="shop-btn">
+                        <h1>Shopping Bag</h1>
+                        <p>Sign in to sync your bag across your devices.</p>
+                    </div>
+                    <div class="text-right">
+                        <p>Need help ? +1-562-926-5672</p>
+                        <p class="flex"><img src="assets/images/chat.svg" alt=""> let's chat</p>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-8 px-4">
+                    <div class="col-span-2 my-5">
+                        <h1 class="_heading">ITEM</h1>
+                        <hr class="__divider">
+                        <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-4 __grp_items my-4 px-4" v-for="cart in cart_items">
+                            <div>
+                                <img :src="`assets/images/recent/${cart.image}`" alt="">
+                            </div>
+                            <div class="relative-p">
+                                <button class="my-3">Best Seller</button>
+                                <div class="__des">
+                                    <h2>{{cart.name}}</h2>
+                                    <p>{{cart.des}}</p>
+                                    <input type="number" :value="`${cart.in_cart}`" class="item_value" @change="update_cart(event,cart)" >
+                                </div>
+                                <div class="actions">
+                                    <a href="#" @click="remove_in_cart(cart)"><img src="assets/images/Trash.svg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="price" style="margin-left: auto; padding-right:20px ;">
+                                <p>${{cart.sale_price}}</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="my-5 col-right">
+                        <h1 class="_heading">Order Summary</h1>
+                        <div class="__summary">
+                            <p>Subtotal <span>${{totalCartPrice}}</span></p>
+                            <p>Shipping Fee <span>$0</span></p>
+                            <hr class="__divider">
+                            <h2 class="_total">Estimated Total <span>${{totalCartPrice}}</span></h2>
+                        </div>
+                        <button>Checkout as a Guest</button>
+                        <button>Sign in for faster Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- link to cart page accessible across homepage -->
+        <!-- <div class="fixed top-10 right-10 p-4  sm-hidden">
+            <button class="bg-black hover:bg-black-700 text-white rounded-full p-4" @click="cart_page = true">
+              <img src="assets/images/shopping_cart.svg" alt="">
+            </button>
+          </div> -->
+          
+        <hr class="__divider">
+        <!-- footer -->
+        <section class="footer">
+            <div class="container mx-auto">
+                <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8">
+                    <div class="col">
+                        <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-8">
+                            <div>
+                                <h2 class="nav-heading">company info</h2>
+                                <ul>
+                                    <li>about THREADED</li>
+                                    <li>affiliate</li>
+                                    <li>blog</li>
+                                    <li>careers</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2>help & support</h2>
+                                <ul>
+                                    <li>fAQ</li>
+                                    <li>shipping</li>
+                                    <li>returns</li>
+                                    <li>how to order</li>
+                                    <li>how to track</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2>customer care</h2>
+                                <ul>
+                                    <li>contact us</li>
+                                    <li>payment methods</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col social">
+                        <h2>follow us</h2>
+                        <div class="__icons">
+                            <img src="assets/images/footer-icons/bx_bxl-facebook.svg" alt="">
+                            <img src="assets/images/footer-icons/bx_bxl-instagram.svg" alt="">
+                            <img src="assets/images/footer-icons/bx_bxl-twitter.svg" alt="">
+                            <img src="assets/images/footer-icons/bx_bxl-youtube.svg" alt="">
+                            <img src="assets/images/footer-icons/bx_bxl-pinterest-alt.svg" alt="">
+                            <img src="assets/images/footer-icons/bx_bxl-tiktok.svg" alt="">
+                        </div>
+                        <h2 class="mt-5">we accept</h2>
+                        <div class="__icons">
+                            <img src="assets/images/payment-type/image 1.png" alt="">
+                            <img src="assets/images/payment-type/image 2.png" alt="">
+                            <img src="assets/images/payment-type/image 3.png" alt="">
+                            <img src="assets/images/payment-type/image 4.png" alt="">
+                            <img src="assets/images/payment-type/image 5.png" alt="">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8">
+                        <div>
+                            <h3>©2021 THREADED All Rights Reserved.</h3>
+                        </div>
+                        <div>
+                            <img src="assets/images/Logo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Popup modal after clicking buy now button -->
+        <div class="popup">
+              <div :class="`fixed z-10 overflow-y-auto top-0 w-full left-0 ${edit_modal ? '': 'hidden'}`" id="modal">
+                <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                  <div class="fixed inset-0 transition-opacity">
+                    <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+                  </div>
+                  <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+                  <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <h1 class="text-center item-added">Successfully added to cart</h1>
+                    </div>
+                    
+                      <button type="button" class="w-full py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"  @click="edit_modal = false"><i class="fas fa-plus"></i> Close</button>
+                    
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        data:{
+            cart_page:false,
+            products:[
+                {name:'winter fashion',image:'product.png'},
+                {name:'boots',image:'product (1).png'},
+                {name:'night out',image:'product (2).png'},
+                {name:'holidays',image:'product (3).png'},
+                {name:'out wear',image:'product (4).png'},
+                {name:'white dresses',image:'product (5).png'},
+                {name:'sweaters',image:'product (6).png'},
+                {name:'party',image:'product (7).png'},
+              
+            ],
+            recently_bought_items:[
+                {uid:1,name:'winter fashion',image:'recent (4).png',des:'Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit',reg_price:38,sale_price:38,in_cart:0},
+                {uid:2,name:'winter fashion',image:'recent (5).png',des:'Chevron Flap Crossbody Bag',reg_price:7.34,sale_price:5.77,in_cart:0},
+                {uid:3,name:'winter fashion',image:'recent (1).png',des:'Manilla Tan Multi Plaid Oversized Fringe Scarf',reg_price:39,sale_price:29,in_cart:0},
+                {uid:4,name:'winter fashion',image:'recent (2).png',des:'Diamante Puff Sleeve Dress - Black',reg_price:45.99,sale_price:45.99,in_cart:0},
+                {uid:5,name:'winter fashion',image:'recent (3).png',des:'Banneth Open Front Formal Dress in Black',reg_price:99.65,sale_price:69,in_cart:0},
+              
+            ],
+            cart_items:[
+              
+            ],
+            inspo:[
+                {image:'inspo (1).png'},
+                {image:'inspo (2).png'},
+                {image:'inspo (3).png'},
+                {image:'inspo (4).png'},
+                {image:'inspo (5).png'},
+            ],
+            items_in_cart:[],
+            edit_modal:false,
+        },
+        computed: {
+            totalCartPrice() {
+            return this.cart_items.reduce((total, item) => {
+                return total + item.sale_price * item.in_cart;
+            }, 0);
+            }
+        },
+        methods:{
+            add_to_cart(item){
+                const existingItem = this.cart_items.find(cartItem => cartItem.uid === item.uid);
+
+                if (existingItem) {
+                    existingItem.in_cart++;
+                } else {
+                    this.cart_items.push({ ...item, in_cart: 1 });
+                }
+                // Save cart items to localStorage
+                localStorage.setItem('cart_items', JSON.stringify(this.cart_items));
+                this.edit_modal = true;
+            },
+            retrieve_cart_items() {
+                const storedCartItems = localStorage.getItem('cart_items');
+                if (storedCartItems) {
+                    this.cart_items = JSON.parse(storedCartItems);
+                }
+            },
+            update_cart(event,cart){
+                const existingItem = this.cart_items.find(cartItem => cartItem.uid === cart.uid);
+                const value = event.target.value;
+                existingItem.in_cart = value;
+                localStorage.setItem('cart_items', JSON.stringify(this.cart_items));
+            },
+
+            remove_in_cart(cart){
+                if(confirm('Are you sure you want to remove this item ?')){
+                    const index = this.cart_items.findIndex(cartItem => cartItem.uid === cart.uid);
+                    
+                    if (index !== -1) {
+                        this.cart_items.splice(index, 1);
+                    }
+                    
+                    localStorage.setItem('cart_items', JSON.stringify(this.cart_items));
+                }
+                
+            }
+        },
+        created(){
+            this.retrieve_cart_items();
+        },
+        mounted(){
+            
+        }
+    })
+    </script>
+</body>
+</html>
