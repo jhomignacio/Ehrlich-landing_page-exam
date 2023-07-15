@@ -831,10 +831,4 @@ body {
   text-transform: capitalize;
   padding: 20px 0;
 }
-
-@media screen and (max-width: 768px) {
-  .sm-hidden {
-    display: none;
-  }
-}
 /*# sourceMappingURL=styles.css.map */
